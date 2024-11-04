@@ -1,0 +1,54 @@
+#app {
+    max-width: 100%;
+    overflow: hidden;
+    & aside {
+        background: var(--surface-secondary);
+    }
+    & .aside-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        & img {
+            max-width: 19.5rem;
+        }
+        & > img {
+            margin-bottom: .5rem;
+            padding-top: 0.25rem;
+        }
+    }
+}
+
+@media (width >= 80em) {
+    #app {
+        grid-template-columns: 51.25% 48.75%;
+        height: 100vh;
+        & aside {
+            order: 2;
+        }
+        .aside-container {
+            width: 39rem;
+            align-items: initial;
+            & img {
+                max-width: 100%;
+            }
+            & img[src*="Logo"] {
+                max-width: 12rem;
+            }
+            & header {
+                width: 100%;
+                h2 {
+                    margin-block: 0.5rem;
+                    font: 600 2.5rem/1.25 var(--font);
+            
+                    span {
+                        color: var(--text-highlight);
+                    }
+                }
+                p {
+                    font: 400 1rem/120% var(--font);
+                    color: var(--text-secondary);
+                }
+            }
+        }
+    }
+}

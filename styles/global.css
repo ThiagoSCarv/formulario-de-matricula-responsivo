@@ -29,9 +29,10 @@
     --semantic-error: #DC2626;
     --font: "Poppins", serif;
     --heading1: 700 2rem/120% var(--font);
-    --heading2: 700 1.5rem/120% var(--font);
+    --heading2: 600 1.5rem/120% var(--font);
     --heading3: 700 1.25rem/120% var(--font);
     --heading4: 700 1rem/120% var(--font);
+    --paragraph: 400 1rem/120% var(--font);
     --py-base: 1.5rem;
     --px-base: 1.5rem;
 }
@@ -41,6 +42,16 @@ body {
 
     font: var(--font);
     color: var(--text-secondary);
+}
+
+h1 {
+  font: var(--heading2);
+  color: var(--text-primary);
+}
+
+p {
+  font: var(--paragraph);
+  color: var(--text-secondary);
 }
 
 @media (width >= 80em) {

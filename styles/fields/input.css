@@ -1,0 +1,42 @@
+.input-wrapper,
+.select-wrapper,
+.textarea-wrapper,
+.dropparea-wrapper {
+    margin-top: 1.25rem;
+    & label {
+        display: block;
+        font: 400 .875rem/120% var(--font);
+        color: var(--text-secondary);
+        margin-bottom: .25rem;
+    }
+    input,
+    select,
+    textarea {
+        appearance: none;
+        border-radius: .5rem;
+        border: 1px solid var(--stroke-default);
+        width: 100%;
+        padding-block: .75rem;
+        font: var(--paragraph);
+        color: var(--text-secondary);
+        padding-left: 1rem;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: .25rem solid var(--surface-secondary);
+        border-color: var(--stroke-highlight);
+        color: var(--text-primary);
+    }
+    input[type="date"] {
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+    }
+    select {
+        background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+        
+    }
+
+}
+

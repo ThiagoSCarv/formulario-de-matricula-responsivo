@@ -1,6 +1,8 @@
 #app {
     max-width: 100%;
-    overflow: hidden;
+    height: 100vh;
+    overflow: auto;
+    gap: 0;
     & aside {
         background: var(--surface-secondary);
     }
@@ -18,10 +20,36 @@
     }
 }
 
+main {
+    overflow: auto;
+    & .main-container {
+        & .back {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            & span {
+                margin-top: 0.5rem;
+                font: var(--paragraph);
+                color: var(--text-secondary);
+            }
+        }
+        form {
+            margin-top: 3rem;
+        }
+    }
+}
+
 @media (width >= 80em) {
     #app {
         grid-template-columns: 51.25% 48.75%;
-        height: 100vh;
+        main {
+            & .main-container {
+                & .back {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
         & aside {
             order: 2;
         }

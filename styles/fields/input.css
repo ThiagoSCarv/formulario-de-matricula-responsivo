@@ -37,6 +37,32 @@
         background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
         
     }
-
+    & input:disabled {
+        color: var(--text-tertiary);
+        background: var(--surface-disabled);
+        border: var(--stroke-default);
+    }
+    & small {
+        display: block;
+        font: 400 .875rem/140% var(--font);
+        margin-top: .25rem;
+    }
+    & input:invalid {
+        border: 2px solid var(--semantic-error);
+        outline: 0px;
+    }
+    & input:required+.error {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        margin-top: .25rem;
+        & span {
+            font: 400 .875rem/140% var(--font);
+            color: var(--semantic-error);
+        }
+    }
+    & input:not(:focus):valid+.error {
+        display: none;
+    }
 }
 
